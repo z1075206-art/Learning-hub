@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LearnHub | Learn Without Limits</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home"><span class="brand-icon">L</span> Learn<span>Hub</span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation">☰</button>
+    <nav id="mainNav">
+      <a href="#home">Home</a><a href="#courses">Courses</a><a href="#notes">Study Notes</a>
+      <a href="#quiz">Quizzes</a><a href="#about">About</a><a href="#contact">Contact</a>
+      <button class="btn btn-small" id="openLogin">Student Login</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <span class="eyebrow">YOUR LEARNING JOURNEY STARTS HERE</span>
+        <h1>Learn new skills.<br><span>Build your future.</span></h1>
+        <p>Explore useful courses, study notes, downloadable resources and quick quizzes in one simple learning hub.</p>
+        <div class="hero-actions"><a class="btn" href="#courses">Explore Courses</a><a class="btn btn-outline" href="#about">Learn More</a></div>
+        <div class="hero-stats"><div><strong>Learn</strong><small>At your own pace</small></div><div><strong>Practice</strong><small>With quick quizzes</small></div><div><strong>Grow</strong><small>Every day</small></div></div>
+      </div>
+      <div class="hero-card"><div class="book-illustration">📚</div><div class="floating-note">✦ Keep learning<br><small>Your future matters</small></div><div class="hero-card-text"><span>LEARNHUB GUIDE</span><h3>Knowledge opens doors.</h3><p>Small steps make big progress.</p></div></div>
+    </section>
+
+    <section class="section" id="courses">
+      <div class="section-heading"><div><span class="eyebrow">LEARN SOMETHING NEW</span><h2>Explore our courses</h2></div><p>Choose a topic and start learning today.</p></div>
+      <div class="search-wrap"><span>⌕</span><input id="courseSearch" type="search" placeholder="Search courses..." aria-label="Search courses"></div>
+      <div class="course-grid" id="courseGrid">
+        <article class="course-card" data-search="web development html css javascript coding"><div class="course-icon purple">💻</div><span class="tag">TECHNOLOGY</span><h3>Web Development</h3><p>Learn the basics of HTML, CSS and JavaScript.</p><a href="#contact">Explore course →</a></article>
+        <article class="course-card" data-search="accounting finance bookkeeping balance sheet"><div class="course-icon green">📊</div><span class="tag">BUSINESS</span><h3>Accounting & Finance</h3><p>Understand accounting concepts and financial basics.</p><a href="#contact">Explore course →</a></article>
+        <article class="course-card" data-search="english communication vocabulary grammar"><div class="course-icon orange">🗣️</div><span class="tag">LANGUAGE</span><h3>English Skills</h3><p>Build vocabulary, grammar and communication skills.</p><a href="#contact">Explore course →</a></article>
+        <article class="course-card" data-search="computer digital skills ms office"><div class="course-icon blue">🖥️</div><span class="tag">DIGITAL SKILLS</span><h3>Computer Basics</h3><p>Practice useful computer and office skills.</p><a href="#contact">Explore course →</a></article>
+        <article class="course-card" data-search="study skills exam preparation notes"><div class="course-icon pink">📝</div><span class="tag">STUDY</span><h3>Study Skills</h3><p>Plan study time and prepare for examinations.</p><a href="#notes">View notes →</a></article>
+        <article class="course-card" data-search="business entrepreneurship management"><div class="course-icon yellow">🚀</div><span class="tag">CAREER</span><h3>Business Basics</h3><p>Explore business, management and career concepts.</p><a href="#contact">Explore course →</a></article>
+      </div>
+      <p id="noCourses" class="empty-message" hidden>No courses found. Try another search.</p>
+    </section>
+
+    <section class="section notes-section" id="notes">
+      <div class="section-heading"><div><span class="eyebrow">STUDY SMARTER</span><h2>Study notes & resources</h2></div><p>Open a sample resource or add your own PDF files.</p></div>
+      <div class="resource-grid">
+        <article class="resource-card"><div class="resource-icon">📄</div><div><h3>HTML Basics</h3><p>Starter notes for web development.</p><a href="notes/html-basics.txt" download>Download notes ↓</a></div></article>
+        <article class="resource-card"><div class="resource-icon">📘</div><div><h3>Accounting Basics</h3><p>Introduction to debits and credits.</p><a href="notes/accounting-basics.txt" download>Download notes ↓</a></div></article>
+        <article class="resource-card"><div class="resource-icon">📋</div><div><h3>Study Planner</h3><p>A simple checklist for your learning.</p><a href="notes/study-planner.txt" download>Download planner ↓</a></div></article>
+      </div>
+      <div class="upload-tip"><strong>For your own PDFs:</strong> put your PDF files in the <code>notes</code> folder, then add a link to them in <code>index.html</code>.</div>
+    </section>
+
+    <section class="quiz-section" id="quiz"><div class="quiz-copy"><span class="eyebrow">TEST YOUR KNOWLEDGE</span><h2>Ready for a quick quiz?</h2><p>Answer these sample questions and check your score instantly.</p><ul><li>✓ Instant feedback</li><li>✓ Simple practice questions</li><li>✓ Learn at your own pace</li></ul></div>
+      <div class="quiz-box"><div class="quiz-top"><span>QUICK QUIZ</span><span id="questionCounter">Question 1 of 3</span></div><h3 id="questionText">Which language is used to structure a web page?</h3><div id="answerOptions" class="answer-options"></div><p id="quizFeedback" aria-live="polite"></p><button id="nextQuestion" class="btn" disabled>Next Question →</button></div>
+    </section>
+
+    <section class="section about-section" id="about"><div class="about-visual"><div class="about-symbol">✦</div><div class="about-label">Learn • Practice • Grow</div></div><div class="about-copy"><span class="eyebrow">ABOUT LEARNHUB</span><h2>A friendly place to keep learning.</h2><p>LearnHub is an education website concept designed to bring learning resources together. Students can explore subjects, practice quizzes and access study materials in one place.</p><div class="about-points"><div><strong>01</strong><span>Easy to use</span></div><div><strong>02</strong><span>Made for learners</span></div><div><strong>03</strong><span>Works on mobile</span></div></div></div></section>
+
+    <section class="contact-section" id="contact"><div><span class="eyebrow">GET IN TOUCH</span><h2>Have a question?</h2><p>Send a message about courses or learning resources.</p></div><form id="contactForm" class="contact-form"><label for="contactName">Your name</label><input id="contactName" required placeholder="Enter your name"><label for="contactEmail">Email address</label><input id="contactEmail" type="email" required placeholder="you@example.com"><label for="contactMessage">Message</label><textarea id="contactMessage" required rows="4" placeholder="Write your message..."></textarea><button class="btn" type="submit">Send message</button><p id="contactFeedback" aria-live="polite"></p></form></section>
+  </main>
+
+  <footer class="site-footer"><a class="brand footer-brand" href="#home"><span class="brand-icon">L</span> Learn<span>Hub</span></a><p>Learn something today. Grow a little every day.</p><div class="footer-links"><a href="#home">Home</a><a href="#courses">Courses</a><a href="#notes">Resources</a><a href="#contact">Contact</a></div><small>© <span id="year"></span> LearnHub. Student project demo.</small></footer>
+
+  <div class="modal" id="loginModal" aria-hidden="true"><div class="modal-panel"><button class="modal-close" id="closeLogin" aria-label="Close">×</button><span class="eyebrow">WELCOME BACK</span><h2>Student access</h2><p class="modal-note">Demo form only. It does not create a real account or save passwords.</p><form id="loginForm"><label for="studentEmail">Email</label><input id="studentEmail" type="email" required placeholder="student@example.com"><label for="studentPassword">Password</label><input id="studentPassword" type="password" required minlength="4" placeholder="Enter any 4+ characters"><button class="btn" type="submit">Continue to demo</button><p id="loginFeedback" aria-live="polite"></p></form></div></div>
+  <script src="script.js"></script>
+</body>
+</html>
